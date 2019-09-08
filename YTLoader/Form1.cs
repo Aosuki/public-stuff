@@ -13,12 +13,15 @@ namespace YTLoader
         public Form1()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void Label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private string name;
 
         private async void Button1_Click(object sender, EventArgs e)
         {
@@ -28,17 +31,15 @@ namespace YTLoader
                 {
                     var youtube = YouTube.Default;
                     var video = await youtube.GetVideoAsync(textBox1.Text);
-                    string filename = textBox2.Text;
-                    if(filename == "")
-                    {
-                        filename = video.FullName;
-                    }
+                    string filename = "";
+                    string ending = comboBox1.SelectedItem.ToString();
+                    setName(filename, video.FullName, ending);
 
                     using(WebClient client = new WebClient())
                     {
                         client.DownloadFileCompleted += client_Completed;
                         client.DownloadProgressChanged += dlProgressChange;
-                        client.DownloadFileAsync(new Uri(video.GetUri()), fbd.SelectedPath + @"\" + filename);
+                        client.DownloadFileAsync(new Uri(video.GetUri()), fbd.SelectedPath + @"\" + getName());
                         //File.WriteAllBytes(fbd.SelectedPath + @"\" + filename, await video.GetBytesAsync());
                     }
                 }
@@ -72,6 +73,28 @@ namespace YTLoader
         }
 
         private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public string getName()
+        {
+            return name;
+        }
+        public void setName(string name, string video, string ending)
+        {
+            name = textBox2.Text;
+            if (textBox2.Text == "")
+            {
+                name = video;
+            }
+            if(ending != "original")
+            {
+                name += ending;
+            }
+            this.name = name;
+        }
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

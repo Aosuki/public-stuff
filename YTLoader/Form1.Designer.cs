@@ -35,6 +35,7 @@
             this.progPercent = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.filename = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -87,7 +88,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(85, 32);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(320, 20);
+            this.textBox2.Size = new System.Drawing.Size(234, 20);
             this.textBox2.TabIndex = 5;
             this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
@@ -101,11 +102,25 @@
             this.filename.Text = "Filename:";
             this.filename.Click += new System.EventHandler(this.Label1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "original",
+            ".mp3"});
+            this.comboBox1.Location = new System.Drawing.Point(326, 32);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(79, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 106);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.progPercent);
             this.Controls.Add(this.progressBar1);
@@ -132,6 +147,7 @@
         private System.Windows.Forms.Label progPercent;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label filename;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
