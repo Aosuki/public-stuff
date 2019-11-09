@@ -96,5 +96,59 @@ namespace Test
         {
 
         }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            if (!panel2.Controls.Contains(testcon3.Instance))
+            {
+                panel2.Controls.Add(testcon3.Instance);
+                testcon3.Instance.Dock = DockStyle.Fill;
+                testcon3.Instance.BringToFront();
+            }
+            else testcon3.Instance.BringToFront();
+        }
+
+        private void Button2_Click_1(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            if (!panel2.Controls.Contains(testcon2.Instance))
+            {
+                panel2.Controls.Add(testcon2.Instance);
+                testcon2.Instance.Dock = DockStyle.Fill;
+                testcon2.Instance.BringToFront();
+            }
+            else testcon2.Instance.BringToFront();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            if(pictureBox1.Visible == false)
+            {
+                pictureBox1.Visible = true;
+                pictureBox1.BringToFront();
+            }
+            else if (pictureBox1.Visible == true)
+            {
+                pictureBox1.Visible = false;
+            }
+        }
+
+        private void Button9_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            if (!panel2.Controls.Contains(testcon1.Instance))
+            {
+                panel2.Controls.Add(testcon1.Instance);
+                testcon1.Instance.Dock = DockStyle.Fill;
+                testcon1.Instance.BringToFront();
+            }
+            else testcon1.Instance.BringToFront();
+        }
     }
 }

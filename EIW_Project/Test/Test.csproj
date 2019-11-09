@@ -54,6 +54,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="testcon1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="testcon1.Designer.cs">
+      <DependentUpon>testcon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testcon2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="testcon2.Designer.cs">
+      <DependentUpon>testcon2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testcon3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="testcon3.Designer.cs">
+      <DependentUpon>testcon3.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +84,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="testcon1.resx">
+      <DependentUpon>testcon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testcon2.resx">
+      <DependentUpon>testcon2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testcon3.resx">
+      <DependentUpon>testcon3.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
