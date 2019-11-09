@@ -20,8 +20,8 @@ namespace Test
         {
             InitializeComponent();
         }
-    
-    private void Button1_Click(object sender, EventArgs e)
+
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -62,9 +62,39 @@ namespace Test
         {
             if (dragging)
             {
-            Point p = PointToScreen(e.Location);
-            Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
