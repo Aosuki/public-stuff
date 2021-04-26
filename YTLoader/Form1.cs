@@ -36,7 +36,7 @@ namespace YTLoader
                     if (fbd.ShowDialog() == DialogResult.OK)
                     {
                         var youtube = YouTube.Default;
-                        var video = await youtube.GetVideoAsync(textBox1.Text);
+                        YouTubeVideo video = await youtube.GetVideoAsync(textBox1.Text);
                         string filename = "";
                         string ending = comboBox1.SelectedItem.ToString();
                         setName(filename, video.FullName, ending);
